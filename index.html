@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spin to Win Prank</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 SPIN TO WIN! 🎉</h1>
+        <p>Click the wheel to claim your prize!</p>
+
+        <div class="wheel-container">
+            <div class="arrow"></div>
+            <div class="wheel" id="wheel">
+                <svg
+                    id="pizzaWheel"
+                    width="250"
+                    height="250"
+                    viewBox="0 0 250 250"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="border-radius: 50%; overflow: visible"
+                ></svg>
+            </div>
+            <button
+                id="spinButton"
+                style="margin-top: 20px; padding: 10px 20px; font-weight: bold; cursor: pointer"
+            >
+                SPIN
+            </button>
+        </div>
+
+        <!-- Prize items container (hidden) -->
+        <div id="prizes-container" style="display: none">
+            <div
+                class="prize-iphone prize-item"
+                data-name="IPHONE 15 PRO"
+                data-image="./iphone_image.webp"
+                data-color="#FFD700"
+                data-width="30"
+                data-height="60"
+                data-rotate="16"
+                data-x="3"
+                data-y="-10"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-airpods prize-item"
+                data-name="AirPods"
+                data-image="./air%20pods.png"
+                data-color="#F0F0F0"
+                data-width="50"
+                data-height="60"
+                data-rotate="65"
+                data-x="7"
+                data-y="-7"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-polathin prize-item"
+                data-name="polathin bag"
+                data-image="./polathin%20bag.png"
+                data-color="#FF6B6B"
+                data-width="55"
+                data-height="60"
+                data-rotate="92"
+                data-x="10"
+                data-y="0"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-waifu prize-item"
+                data-name="Waifu"
+                data-image="./waifu.png"
+                data-color="#4ECDC4"
+                data-width="80"
+                data-height="60"
+                data-rotate="125"
+                data-x="10"
+                data-y="10"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-tryagain prize-item"
+                data-name="Try Again"
+                data-image="https://cdn-icons-png.flaticon.com/512/1828/1828843.png"
+                data-color="#FFA07A"
+                data-width="35"
+                data-height="60"
+                data-rotate="72"
+                data-x="1"
+                data-y="10"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-pen prize-item"
+                data-name="pen"
+                data-image="./pen.png"
+                data-color="#FFB347"
+                data-width="50"
+                data-height="60"
+                data-rotate="160"
+                data-x="0"
+                data-y="0"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-headphones prize-item"
+                data-name="headphones"
+                data-image="./headphones.png"
+                data-color="#8A2BE2"
+                data-width="50"
+                data-height="60"
+                data-rotate="235"
+                data-x="-10"
+                data-y="5"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-sarukh prize-item"
+                data-name="sarukh khan"
+                data-image="./sarukh khan.jpg"
+                data-color="#00CED1"
+                data-width="40"
+                data-height="60"
+                data-rotate="-90"
+                data-x="-18"
+                data-y="0"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-twitter prize-item"
+                data-name="twitter blue tick"
+                data-image="./twitter%20blue%20tick.png"
+                data-color="#FF69B4"
+                data-width="50"
+                data-height="60"
+                data-rotate="-40"
+                data-x="-12"
+                data-y="-8"
+                data-scale="1"
+            ></div>
+            <div
+                class="prize-taddy prize-item"
+                data-name="taddy"
+                data-image="./taddy.jpg"
+                data-color="#D2691E"
+                data-width="30"
+                data-height="60"
+                data-rotate="-20"
+                data-x="-5"
+                data-y="-10"
+                data-scale="1"
+            ></div>
+        </div>
+
+        <div class="result" id="result">
+            YOU WON: <span id="prize-name" style="color: gold"></span>
+        </div>
+
+        <form id="claimForm">
+            <h3>Enter details to claim:</h3>
+            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Address" required />
+            <input type="email" placeholder="Email" required />
+            <button type="submit">CLAIM PRIZE!</button>
+        </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
